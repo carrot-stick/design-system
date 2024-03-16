@@ -3,7 +3,7 @@ import { fn } from "@storybook/test";
 import { Button } from "./Button";
 
 const meta = {
-  title: "Example/Button",
+  title: "Design-system/Button",
   component: Button,
   parameters: {
     layout: "centered",
@@ -18,37 +18,34 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
-  args: {
-    primary: true,
-    label: "Button",
-  },
-};
-
-export const Secondary: Story = {
-  args: {
-    label: "Button",
-  },
-};
-
-export const Large: Story = {
+export const Solid: Story = {
   args: {
     size: "large",
-    label: "Button",
+    backgroundColor: "#f7cac9",
+    label: "Solid",
   },
 };
 
-export const Small: Story = {
+export const Outline: Story = {
   args: {
-    size: "small",
-    label: "Button",
+    variant: "outline",
+    backgroundColor: "#92a8d1",
+    label: "Outline",
   },
 };
 
-export const Warning: Story = {
+export const Ghost: Story = {
   args: {
-    primary: true,
-    label: "Delete now",
-    backgroundColor: "red",
+    variant: "ghost",
+    backgroundColor: "#b5addd",
+    label: "Ghost",
+  },
+};
+
+export const Link: Story = {
+  args: {
+    variant: "link",
+    backgroundColor: "#72d45233",
+    label: "Link",
   },
 };

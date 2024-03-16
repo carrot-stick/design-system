@@ -1,7 +1,4 @@
 import type { Preview } from "@storybook/react";
-import { extendTheme } from "@chakra-ui/react";
-
-const theme = extendTheme();
 
 const preview: Preview = {
   parameters: {
@@ -12,7 +9,6 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    chakra: { theme },
   },
 };
 
