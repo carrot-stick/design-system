@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from "@storybook/react";
 import Input, { InputProps } from "./Input";
+import { Meta, StoryObj } from "@storybook/react";
 import { InputList } from "./Input.styles";
 
 const meta: Meta<typeof Input> = {
@@ -58,15 +58,11 @@ export const PrimaryInput: StoryObj<InputProps> = {
   },
   render: (args) => {
     return (
-      <>
-        <InputList>
-          <Input size="sm" variant="primary" color={args.color} />
-
-          <Input size="md" variant="primary" color={args.color} />
-
-          <Input size="lg" variant="primary" color={args.color} />
-        </InputList>
-      </>
+      <InputList>
+        <Input size="sm" variant="primary" color={args.color} />
+        <Input size="md" variant="primary" color={args.color} />
+        <Input size="lg" variant="primary" color={args.color} />
+      </InputList>
     );
   },
 };
@@ -77,15 +73,11 @@ export const OutlineInput: StoryObj<InputProps> = {
   },
   render: (args) => {
     return (
-      <>
-        <InputList>
-          <Input size="sm" variant="outline" color={args.color} />
-
-          <Input size="md" variant="outline" color={args.color} />
-
-          <Input size="lg" variant="outline" color={args.color} />
-        </InputList>
-      </>
+      <InputList>
+        <Input size="sm" variant="outline" color={args.color} />
+        <Input size="md" variant="outline" color={args.color} />
+        <Input size="lg" variant="outline" color={args.color} />
+      </InputList>
     );
   },
 };
