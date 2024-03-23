@@ -21,12 +21,13 @@ const Button: React.FC<ButtonProps> = ({
   children,
   ...props
 }) => {
-  const { padding, border, fontSize, fontColor, backgroundColor, hoverColor } =
+  const { width, height, border, fontSize, fontColor, backgroundColor, hoverColor } =
     setButtonStyles(size, variant, color);
 
   return (
     <SC.StyledButton
-      padding={padding}
+      width={width}
+      height={height}
       border={border}
       fontSize={fontSize}
       fontColor={fontColor}

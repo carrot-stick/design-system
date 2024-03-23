@@ -1,11 +1,12 @@
-import theme from "../../styles/index";
+import theme from "../../styles";
 
 export type ButtonSize = "sm" | "md" | "lg";
 export type ButtonVariant = "contained" | "outlined" | "text";
 export type ButtonColor = "serenity" | "roseQuartz" | "gray";
 
 interface ButtonStyle {
-  padding: string;
+  height: string;
+  width: string;
   border: string;
   fontSize: string;
   fontColor: string;
@@ -19,9 +20,21 @@ export const setButtonStyles = (
   color: ButtonColor
 ): ButtonStyle => {
   const buttonSizeMap = {
-    sm: { padding: "12px 24px", fontSize: "14px" },
-    md: { padding: "13px 26px", fontSize: "16px" },
-    lg: { padding: "14px 28px", fontSize: "18px" },
+    sm: {
+      width: theme.sizes.button.sm.width,
+      height: theme.sizes.button.sm.height,
+      fontSize: theme.sizes.button.sm.fontSize,
+    },
+    md: {
+      width: theme.sizes.button.md.width,
+      height: theme.sizes.button.md.height,
+      fontSize: theme.sizes.button.md.fontSize,
+    },
+    lg: {
+      width: theme.sizes.button.lg.width,
+      height: theme.sizes.button.lg.height,
+      fontSize: theme.sizes.button.lg.fontSize,
+    },
   };
 
   const buttonColorMap = {
@@ -44,7 +57,8 @@ export const setButtonStyles = (
 
   const buttonStyle = {
     contained: {
-      padding: buttonSizeMap[size].padding,
+      width: buttonSizeMap[size].width,
+      height: buttonSizeMap[size].height,
       fontSize: buttonSizeMap[size].fontSize,
       border: "none",
       fontColor: buttonColorMap[color].fontColor,
@@ -52,7 +66,8 @@ export const setButtonStyles = (
       hoverColor: buttonColorMap[color].hoverColor,
     },
     outlined: {
-      padding: buttonSizeMap[size].padding,
+      width: buttonSizeMap[size].width,
+      height: buttonSizeMap[size].height,
       fontSize: buttonSizeMap[size].fontSize,
       border: `1px solid ${buttonColorMap[color].buttonColor}`,
       fontColor: buttonColorMap[color].fontColor,
@@ -60,7 +75,8 @@ export const setButtonStyles = (
       hoverColor: buttonColorMap[color].hoverColor,
     },
     text: {
-      padding: buttonSizeMap[size].padding,
+      width: buttonSizeMap[size].width,
+      height: buttonSizeMap[size].height,
       fontSize: buttonSizeMap[size].fontSize,
       border: "none",
       fontColor: buttonColorMap[color].fontColor,

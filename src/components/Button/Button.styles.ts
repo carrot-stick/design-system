@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export interface StyledButtonProps {
-  padding: string;
+  width: string;
+  height: string;
   border: string;
   fontSize: string;
   fontColor: string;
@@ -10,7 +11,8 @@ export interface StyledButtonProps {
 }
 
 export const StyledButton = styled.button<StyledButtonProps>`
-  padding: ${({ padding }) => padding};
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
   border: ${({ border }) => border};
   border-radius: 3em;
   font-size: ${({ fontSize }) => fontSize};
@@ -21,4 +23,10 @@ export const StyledButton = styled.button<StyledButtonProps>`
     background-color: ${({ hoverColor }) => hoverColor};
     transition: all 0.5s;
   }
+`;
+
+export const Stack = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 `;
