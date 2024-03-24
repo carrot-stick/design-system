@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Pretendard Regular'), url('../fonts/Pretendard-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard-Medium';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Pretendard Medium'), url('../fonts/Pretendard-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard-SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Pretendard SemiBold'), url('../fonts/Pretendard-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Pretendard Bold'), url('../fonts/Pretendard-Bold.woff') format('woff');
+}
