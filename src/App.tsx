@@ -1,19 +1,10 @@
 import styled from "styled-components";
-import { Button } from "./components/Button";
+import Button from "./components/Button/Button";
 
 const App = () => {
-  const onClick = () => {
-    console.log("clicked");
-  };
-
   return (
     <Container>
-      <Button
-        variant="ghost"
-        backgroundColor="#72d45233"
-        label="Button"
-        onClick={onClick}
-      />
+      <Button children={""} />
     </Container>
   );
 };
