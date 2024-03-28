@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vite-plugin-svgr": "^4.2.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.2.22",
